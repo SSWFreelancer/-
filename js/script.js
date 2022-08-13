@@ -1,21 +1,26 @@
-// const slider = document.getElementById('slider');
+const slider = document.getElementById('slider');
 
-// noUiSlider.create(slider, {
-
-//     start: [20],
-//     connect: [true,false],
-//     padding: [0,0],
-//     step: 1,
-//     range: {
-//         'min': [1],
-//         'max': [250]
-//     },
-// });
-// var directionField = document.getElementById('slider-margin-value');
-// slider.noUiSlider.on('update', function (values, handle) {
-//     directionField.innerHTML = parseFloat(values[handle]);
-//     $('.hidden').val(values[handle])
-// });
+noUiSlider.create(slider, {
+    start: [10, 90],
+    padding: [0,0],
+    connect: true,
+    range: {
+        'min': 10,
+        'max': 90
+    }
+});
+var input0 = document.getElementById('range-valuestart');
+var input1 = document.getElementById('range-valueend');
+var inputs = [input0, input1];
+slider.noUiSlider.on('update', function (values, handle) {
+    inputs[handle].value = parseFloat(values[handle]);
+});
+input0.addEventListener('change', function () {
+   slider.noUiSlider.set([this.value, null]);
+});
+input1.addEventListener('change', function () {
+   slider.noUiSlider.set([null, this.value]);
+});
 
 function ready(){
    var input = document.getElementById('input__file')
@@ -26,3 +31,10 @@ function ready(){
 };
 
 document.addEventListener("DOMContentLoaded", ready);
+
+
+$(document).ready(function () {
+   $('.block__title').click(function(event){
+      $(this).toggleClass('active').next().slideToggle(300);
+   });
+});

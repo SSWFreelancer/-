@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <title>Форма регистрации покупателя</title>
+   <link rel="stylesheet" href="css/nouislider.min.css"> 
+   <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+      <div class="header__container">
+         <div class="header__connect"></div>
+         <ul>
+            <li>
+               <a href="#">предложения</a>
+            </li>
+            <li>
+               <a href="#">заказы</a>
+            </li>
+            <li>
+               <a href="#">почта</a>
+            </li>                          
+         </ul>
+         <a href="#" class="header__myacc">
+            мой профиль
+            <img src="img/icons/myacc.png" alt="accaunt">
+         </a>
+      </div>
+	</header>
+   <div class="page">
+      <div class="suggestions">
+         <div class="suggestions__body">
+            <div class="suggestions__filter filter">
+               <div class="filter__title">
+                  Фильтры
+               </div>
+               <div class="filter__body">
+                  <div class="filter__rangeslider">
+                     <div class="filter__subtitle">
+                        Розничная цена
+                     </div>            
+                     <div class="filter__inputs">
+                        <input type="number" id="range-valuestart" placeholder="От" value="10">
+                        <input type="number" id="range-valueend" placeholder="До" value="90">                     
+                     </div>
+                     <div class="filter__startend">
+                        <p>10</p>
+                        <p>30</p>
+                        <p>50</p>
+                        <p>70</p>
+                        <p>90</p>             
+                     </div>                  
+                     <div class="filter__range" id="slider">
+                     </div>      
+                  </div>
+                  <div class="filter__blocks">
+                     <div class="filter__block block">
+                        <div class="block__title" id="block__title">
+                           Тип
+                           <span></span>
+                        </div>
+                        <div class="block__checkbox">
+                           <div class="block__checkboxwrap">
+                              <input type="checkbox" id="type1">
+                              <label for="type1"><span></span>Красный</label>
+                              <input type="checkbox" id="type2">
+                              <label for="type2"><span></span>Зеленый</label>                             
+                           </div>
+                        </div>
+                     </div>  
+                     <div class="filter__block block">
+                        <div class="block__title" id="block__title">
+                           Сорт
+                           <span></span>
+                        </div>
+                        <div class="block__checkbox">
+                           <div class="block__checkboxwrap">
+                              <input type="checkbox" id="sort1">
+                              <label for="sort1"><span></span>Красный</label>
+                              <input type="checkbox" id="sort2">
+                              <label for="sort2"><span></span>Зеленый</label>                             
+                           </div>
+                        </div>
+                     </div>   
+                     <div class="filter__block block">
+                        <div class="block__title" id="block__title">
+                           Цвет
+                           <span></span>
+                        </div>
+                        <div class="block__checkbox">
+                           <div class="block__checkboxwrap">
+                              <input type="checkbox" id="color1">
+                              <label for="color1"><span></span>Красный</label>
+                              <input type="checkbox" id="color2">
+                              <label for="color2"><span></span>Зеленый</label>                             
+                           </div>
+                        </div>
+                     </div>  
+                     <div class="filter__block block">
+                        <div class="block__title" id="block__title">
+                           Размер
+                           <span></span>
+                        </div>
+                        <div class="block__checkbox">
+                           <div class="block__checkboxwrap">
+                              <input type="checkbox" id="size1">
+                              <label for="size1"><span></span>Красный</label>
+                              <input type="checkbox" id="size2">
+                              <label for="size2"><span></span>Зеленый</label>                             
+                           </div>
+                        </div>
+                     </div>  
+                     <div class="filter__block block">
+                        <div class="block__title" id="block__title">
+                           Плантация
+                           <span></span>
+                        </div>
+                        <div class="block__checkbox">
+                           <div class="block__checkboxwrap">
+                              <input type="checkbox" id="plant1">
+                              <label for="plant1"><span></span>Красный</label>
+                              <input type="checkbox" id="plant2">
+                              <label for="plant2"><span></span>Зеленый</label>                             
+                           </div>
+                        </div>
+                     </div>                                                                       
+                  </div>   
+                  <div class="filter__buttons">
+                     <a href="#">Сбросить</a>
+                     <a href="#" class="filter__button button">показать</a>
+                  </div>                   
+               </div>
+            </div>
+            <div class="suggestions__content">
+               <div class="suggestions__wrapper">
+                  <div class="suggestions__top">
+                     <div class="suggestions__title">Предложения</div>
+                     <div class="suggestions__search">
+                        <a href=""><img src="img/icons/search.png" alt=""></a>
+                        <input type="text" placeholder="Поиск по названию">
+                     </div>
+                  </div>
+                  <div class="suggestions__bottom">
+                     <div class="suggestions__card">
+                        <a href="#" class="suggestions__image">
+                           <img src="img/suggestions/1.png" alt="">
+                        </a>
+                        <div class="suggestions__description">
+                           <div class="suggestions__texts">
+                              <span>Тип:</span> Роза<br>
+                              <span>Сорт:</span> Наоми<br>
+                              <span>Плантация:</span> Макшан<br>
+                              <span>Длина стебля:</span> 50 см<br>
+                              <p>45, 00 Р</p>
+                           </div>
+                           <a href="#" class="suggestions__link">
+                              <img src="img/icons/link.png" alt="">
+                           </a>
+                        </div>
+                     </div>
+                     <div class="suggestions__card">
+                        <a href="#" class="suggestions__image">
+                           <img src="img/suggestions/2.png" alt="">
+                        </a>
+                        <div class="suggestions__description">
+                           <div class="suggestions__texts">
+                              <span>Тип:</span> Роза<br>
+                              <span>Сорт:</span> Наоми<br>
+                              <span>Плантация:</span> Макшан <br>
+                              <span>Длина стебля:</span> 50 см<br>
+                              <p>45, 00 Р</p>
+                           </div>
+                           <a href="#" class="suggestions__link">
+                              <img src="img/icons/link.png" alt="">
+                           </a>
+                        </div>
+                     </div>
+                     <div class="suggestions__card">
+                        <a href="#" class="suggestions__image">
+                           <img src="img/suggestions/3.png" alt="">
+                        </a>
+                        <div class="suggestions__description">
+                           <div class="suggestions__texts">
+                              <span>Тип:</span> Роза<br>
+                              <span>Сорт:</span> Наоми<br>
+                              <span>Плантация:</span> Макшан <br>
+                              <span>Длина стебля:</span> 50 см<br>
+                              <p>45, 00 Р</p>
+                           </div>
+                           <a href="#" class="suggestions__link">
+                              <img src="img/icons/link.png" alt="">
+                           </a>
+                        </div>
+                     </div>
+                     <div class="suggestions__card">
+                        <a href="#" class="suggestions__image">
+                           <img src="img/suggestions/4.png" alt="">
+                        </a>
+                        <div class="suggestions__description">
+                           <div class="suggestions__texts">
+                              <span>Тип:</span> Роза<br>
+                              <span>Сорт:</span> Наоми<br>
+                              <span>Плантация:</span> Макшан <br>
+                              <span>Длина стебля:</span> 50 см<br>
+                              <p>45, 00 Р</p>
+                           </div>
+                           <a href="#" class="suggestions__link">
+                              <img src="img/icons/link.png" alt="">
+                           </a>
+                        </div>
+                     </div>  
+                     <div class="suggestions__card">
+                        <a href="#" class="suggestions__image">
+                           <img src="img/suggestions/5.png" alt="">
+                        </a>
+                        <div class="suggestions__description">
+                           <div class="suggestions__texts">
+                              <span>Тип:</span> Роза<br>
+                              <span>Сорт:</span> Наоми<br>
+                              <span>Плантация:</span> Макшан <br>
+                              <span>Длина стебля:</span> 50 см<br>
+                              <p>45, 00 Р</p>
+                           </div>
+                           <a href="#" class="suggestions__link">
+                              <img src="img/icons/link.png" alt="">
+                           </a>
+                        </div>
+                     </div>
+                     <div class="suggestions__card">
+                        <a href="#" class="suggestions__image">
+                           <img src="img/suggestions/6.png" alt="">
+                        </a>
+                        <div class="suggestions__description">
+                           <div class="suggestions__texts">
+                              <span>Тип:</span> Роза<br>
+                              <span>Сорт:</span> Наоми<br>
+                              <span>Плантация:</span> Макшан <br>
+                              <span>Длина стебля:</span> 50 см<br>
+                              <p>45, 00 Р</p>
+                           </div>
+                           <a href="#" class="suggestions__link">
+                              <img src="img/icons/link.png" alt="">
+                           </a>
+                        </div>
+                     </div>
+                     <div class="suggestions__card">
+                        <a href="#" class="suggestions__image">
+                           <img src="img/suggestions/7.png" alt="">
+                        </a>
+                        <div class="suggestions__description">
+                           <div class="suggestions__texts">
+                              <span>Тип:</span> Роза<br>
+                              <span>Сорт:</span> Наоми<br>
+                              <span>Плантация:</span> Макшан <br>
+                              <span>Длина стебля:</span> 50 см<br>
+                              <p>45, 00 Р</p>
+                           </div>
+                           <a href="#" class="suggestions__link">
+                              <img src="img/icons/link.png" alt="">
+                           </a>
+                        </div>
+                     </div>
+                     <div class="suggestions__card">
+                        <a href="#" class="suggestions__image">
+                           <img src="img/suggestions/8.png" alt="">
+                        </a>
+                        <div class="suggestions__description">
+                           <div class="suggestions__texts">
+                              <span>Тип:</span> Роза<br>
+                              <span>Сорт:</span> Наоми<br>
+                              <span>Плантация:</span> Макшан <br>
+                              <span>Длина стебля:</span> 50 см<br>
+                              <p>45, 00 Р</p>
+                           </div>
+                           <a href="#" class="suggestions__link">
+                              <img src="img/icons/link.png" alt="">
+                           </a>
+                        </div>
+                     </div>                                                                      
+                  </div>
+               </div>
+               <a href="#" class="suggestions__button button">раскрыть</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="footer other-footer">
+      <div class="footer__container">
+         <div class="footer__content">
+            <a href="#" class="footer__confidence">
+               Политика конфиденциальности
+            </a>
+           <div class="footer__socials socials">
+               <a href="#"><img src="img/icons/insta.png" alt="instagram"></a>
+               <a href="#"><img src="img/icons/whatsapp.png" alt="whatsapp"></a>
+               <a href="#"><img src="img/icons/twt.png" alt="twitter"></a>
+               <a href="#"><img src="img/icons/tg.png" alt="telegram"></a>
+               <a href="#"><img src="img/icons/vk.png" alt="vk"></a>
+            </div>             
+         </div>
+         <div class="footer__socials socials">
+            <a href="#"><img src="img/icons/sms.png" alt="sms"></a>
+            <a href="#"><img src="img/icons/phone.png" alt="phone"></a>            
+         </div>       
+      </div>
+   </div>
+</div>
+<script src="js/nouislider.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script> 
+</body>
+</html>
