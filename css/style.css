@@ -995,6 +995,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 100px;
+  margin-top: 100px;
 }
 @media (max-width: 1886px) {
   .suggestions__body {
@@ -1005,6 +1006,11 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media (max-width: 1500px) {
+  .suggestions__body {
+    margin-top: 60px;
   }
 }
 .suggestions__filter {
@@ -1020,6 +1026,16 @@ body {
     margin-right: 0;
     margin-bottom: 40px;
     width: 1481px;
+  }
+}
+@media (max-width: 1510px) {
+  .suggestions__filter {
+    width: calc(994px + 487 * (100vw - 1024px) / 486);
+  }
+}
+@media (max-width: 1023px) {
+  .suggestions__filter {
+    width: 994px;
   }
 }
 .suggestions__content {
@@ -1065,7 +1081,7 @@ body {
   position: absolute;
   left: -25px;
   bottom: 0;
-  width: 100vw;
+  width: 500vw;
   height: 2px;
   background: #00CD19;
 }
@@ -1191,6 +1207,14 @@ body {
 .filter {
   overflow: hidden;
 }
+@media (max-width: 1886px) {
+  .filter {
+    padding-bottom: 0;
+  }
+}
+.filter.active {
+  padding-bottom: 25px;
+}
 .filter__title {
   font-weight: 500;
   font-size: 32px;
@@ -1200,14 +1224,55 @@ body {
   padding-bottom: 15px;
   margin-bottom: 25px;
 }
+@media (max-width: 1886px) {
+  .filter__title {
+    margin-bottom: 0;
+    padding-bottom: 25px;
+  }
+}
+.filter__title.active {
+  margin-bottom: 25px;
+}
 .filter__title:after {
   content: "";
   position: absolute;
   left: -25px;
   bottom: 0;
-  width: 100vw;
+  width: 500vw;
   height: 2px;
   background: #00CD19;
+}
+.filter__title span {
+  display: none;
+  position: relative;
+  top: 11px;
+  border: 15px solid transparent;
+  border-top: 12px solid #00CD19;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.filter__title.active span {
+  top: -10px;
+  border: 15px solid transparent;
+  border-bottom: 12px solid #00CD19;
+}
+@media (max-width: 1886px) {
+  .filter__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .filter__title span {
+    display: block;
+  }
+}
+@media (max-width: 1886px) {
+  .filter__body {
+    display: none;
+  }
 }
 .filter__rangeslider {
   position: relative;

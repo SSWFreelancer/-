@@ -37,4 +37,11 @@ $(document).ready(function () {
    $('.block__title').click(function(event){
       $(this).toggleClass('active').next().slideToggle(300);
    });
+   if ($(window).width() < 1900) {
+      $('.filter__title').click(function(event){
+         $(this).toggleClass('active').next().slideToggle(300);
+         $('.filter').toggleClass('active');
+      });   
+   }   
+
 });
