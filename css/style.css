@@ -1228,6 +1228,7 @@ body {
   .filter__title {
     margin-bottom: 0;
     padding-bottom: 25px;
+    cursor: pointer;
   }
 }
 .filter__title.active {
@@ -1453,8 +1454,8 @@ body {
   width: 16px;
   height: 16px;
   z-index: 2;
-  left: 2.2px;
-  top: 2.2px;
+  left: 2.3px;
+  top: 2.3px;
   border-radius: 3px;
   background-color: transparent;
   background: #02BC08;
