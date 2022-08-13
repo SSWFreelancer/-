@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <title>Форма регистрации покупателя</title>
+   <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+      <div class="header__container">
+         <div class="header__connect"></div>
+         <a href="#" class="header__acc">
+            главная
+         </a>
+      </div>
+	</header>
+   <div class="page">
+      <div class="registration">
+         <div class="registration__container wrap">   
+            <div class="registration__title">
+               регистрация
+            </div>
+            <form class="registration__form">
+               <div class="registration__content">
+                  <div class="registration__info">
+                     <label>Телефон*</label>
+                     <input name="tel" type="tel" required>
+                     <label>E-mail*</label>
+                     <input name="email" type="email" required>
+                     <label>Пароль*</label>
+                     <input name="password" type="password" required>  
+                     <span>Пароль должен быть не менее 6 символов</span>
+                     <label>Подтверждение пароля*</label>
+                     <input name="repassword" type="password" required>  
+                     <label>Обращение</label>
+                     <input name="appeal" type="text"> 
+                     <label>Имя</label>
+                     <input name="name" type="text"> 
+                     <label>Фамилия</label>
+                     <input name="lname" type="text">  
+                     <label>Наименование организации</label>
+                     <input name="nameorg" type="text">                                        
+                     <label>Город</label>
+                     <input name="city" type="text">  
+                     <label>Улица, дом</label>
+                     <input name="street" type="text">    
+                     <label>ИНН,ОГРНИП*</label>
+                     <input name="INN" type="text" required>   
+                     <label>Дополнительная информация</label>
+                     <input name="otherinfo" type="text">   
+                     <span>*Поля, обязательные для заполнения.</span>       
+                  </div>
+                  <div class="registration__upload">
+                     <input type="file" name="file" id="input__file" accept="image/*">
+                     <label id="input__label" for="input__file">
+                        <span>Файл успешно выбран</span>
+                        <img src="img/upload.png" alt="">
+                        <p>Загрузить фото</p>
+                     </label>
+                 </div>                  
+               </div>
+               <button class="registration__buttton button">Зарегистрироваться</button>                         
+            </form>
+         </div>
+      </div>
+   </div>
+   <div class="footer">
+      <div class="footer__container">
+         <a href="#" class="footer__confidence">
+            Политика конфиденциальности
+         </a>
+        <div class="footer__socials socials">
+            <a href="#"><img src="img/icons/insta.png" alt="instagram"></a>
+            <a href="#"><img src="img/icons/whatsapp.png" alt="whatsapp"></a>
+            <a href="#"><img src="img/icons/twt.png" alt="twitter"></a>
+            <a href="#"><img src="img/icons/tg.png" alt="telegram"></a>
+            <a href="#"><img src="img/icons/vk.png" alt="vk"></a>
+         </div>         
+      </div>
+   </div>
+</div>
+<script src="js/script.js"></script> 
+</body>
+</html>
