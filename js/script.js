@@ -6,6 +6,35 @@ $(document).ready(function () {
    $('#input__file').change(function (event) {
       $('#input__label').addClass('active');
    });
+    $('.tabs__item').click(function (event) {
+          $(this).addClass('active');
+          $(".tabs__item").not(this).removeClass('active');
+    });    
+    $('.tabs__item-1').click(function(event){
+        $('#tab_01').addClass('target');
+        $('#tab_02').removeClass('target');
+        $('#tab_03').removeClass('target');
+        $('#tab_04').removeClass('target');      
+
+    });
+    $('.tabs__item-2').click(function(event){
+        $('#tab_02').addClass('target');
+        $('#tab_01').removeClass('target');
+        $('#tab_03').removeClass('target');
+        $('#tab_04').removeClass('target');
+    });
+    $('.tabs__item-3').click(function(event){
+        $('#tab_03').addClass('target');
+        $('#tab_01').removeClass('target');
+        $('#tab_02').removeClass('target');
+        $('#tab_04').removeClass('target');        
+    });
+    $('.tabs__item-4').click(function(event){
+        $('#tab_04').addClass('target');
+        $('#tab_01').removeClass('target');
+        $('#tab_03').removeClass('target');
+        $('#tab_02').removeClass('target');         
+    }) ;    
 });
 
 const slider = document.getElementById('slider');
