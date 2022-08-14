@@ -2,7 +2,31 @@ $(document).ready(function () {
    $('.view-product__sel span').click(function (event) {
       $('.view-product__sel span').removeClass('active');
       $(this).addClass('active');
+   });  
+   $('.cart-sel1 span').click(function (event) {
+      let abc = $(this).parent().find('span.active');
+      $(this).addClass('active');
+      abc.removeClass('active');
+   });   
+   $('.cart-sel2 span').click(function (event) {
+      let bcd = $(this).parent().find('span.active');
+      $(this).removeClass('active');
+      $(this).addClass('active');
+      bcd.removeClass('active');
    });     
+
+
+   $('.cart__dec').click(function (event) {
+     var $input = $(this).parent().find('input');
+     var count = parseInt($input.val()) - 1;
+     count = count < 1 ? 1 : count;
+     $input.val(count);
+   }); 
+   $('.cart__inc').click(function () {
+     var $input = $(this).parent().find('input');
+     $input.val(parseInt($input.val()) + 1);
+   });
+
    $('#input__file').change(function (event) {
       $('#input__label').addClass('active');
    });
