@@ -686,9 +686,13 @@ body{
 		display: flex;
 		align-items: flex-start;
 		margin-bottom: 100px;
+		margin-top: 100px;
 		@media(max-width: 1886px){
 			flex-direction: column;
 			align-items: center;
+		}
+		@media(max-width: 1500px){
+			margin-top: 60px;
 		}
 	}
 	&__filter {
@@ -701,6 +705,12 @@ body{
 			margin-right: 0;
 			margin-bottom: 40px;
 			width: 1481px;
+		}
+		@media(max-width: 1510px){
+			width: calc(994px + (1481 - 994) * ((100vw - 1024px) / (1510 - 1024)));
+		}
+		@media(max-width: 1023px){
+			width: 994px;
 		}
 	}
 	&__content {
@@ -726,7 +736,7 @@ body{
 		position: relative;
 		&:after{
 			content:'';
-			position: absolute; left: -25px; bottom: 0; width: 100vw;height: 2px;
+			position: absolute; left: -25px; bottom: 0; width: 500vw;height: 2px;
 			background: #00CD19;
 		}
 	}
@@ -831,6 +841,12 @@ body{
 
 .filter {
 	overflow: hidden;
+	@media(max-width: 1886px){
+		padding-bottom: 0;
+	}
+	&.active{
+		padding-bottom: 25px;
+	}
 	&__title {
 		font-weight: 500;
 		font-size: 32px;
@@ -839,10 +855,43 @@ body{
 		position: relative;
 		padding-bottom: 15px;
 		margin-bottom: 25px;
+		@media(max-width: 1886px){
+			margin-bottom: 0;
+			padding-bottom: 25px;
+			cursor: pointer;
+		}		
+		&.active{
+			margin-bottom: 25px;
+		}
 		&:after{
 			content:'';
-			position: absolute; left: -25px; bottom: 0; width: 100vw;height: 2px;
+			position: absolute; left: -25px; bottom: 0; width: 500vw;height: 2px;
 			background: #00CD19;
+		}
+		& span{
+			display: none;
+			position: relative;
+			top: 11px;
+			border: 15px solid transparent; border-top: 12px solid #00CD19;
+			transition: all 0.3s ease 0s;
+		}
+		&.active{
+			& span{
+				top: -10px;
+				border: 15px solid transparent; border-bottom: 12px solid #00CD19;
+			}
+		}
+		@media(max-width: 1886px){
+			display: flex;
+			justify-content: space-between;
+			& span{
+				display: block;
+			}
+		}
+	}
+	&__body{
+		@media(max-width: 1886px){
+			display: none;
 		}
 	}
 	&__rangeslider {
@@ -979,8 +1028,10 @@ body{
 		}
 		& input{
 			display: none;
-			&:checked + label span::after{
-				transform: scale(1);
+			&:checked + label span{
+				&::after{
+					transform: scale(1);
+				}
 			}
 		}
 		& label span{
@@ -990,19 +1041,18 @@ body{
 		  height: 22px;
 		  top: 0px;
 		  left: 0px;
-			border: 0.5px solid #000000;
-			border-radius: 3px;
+		  border: 0.5px solid #000000;
+		  border-radius: 3px;
 		  background-color: transparent;
 		  &::after{
 			  content: '';  
 			  position: absolute;
-			  width: 16px;
-			  height: 16px;
+			  width: 100%;
+			  height: 100%;
 			  z-index: 2;
-			  left: 2.2px;
-			  top: 2.2px;
+			  left: 0px;
+			  top: 0px;
 			  border-radius: 3px;
-			  background-color: transparent;
 			  background: #02BC08;
 			  transform: scale(0);		  	
 		  }
