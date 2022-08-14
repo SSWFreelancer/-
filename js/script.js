@@ -1,12 +1,14 @@
-function ready(){
+$(document).ready(function () {
+   $('.view-product__sel span').click(function (event) {
+      $('.view-product__sel span').removeClass('active');
+      $(this).addClass('active');
+   });     
    var input = document.getElementById('input__file')
    var label = document.getElementById('input__label')
    input.addEventListener('change', function(e){
       label.classList.add('active');
    });
-};
-
-document.addEventListener("DOMContentLoaded", ready);
+});
 
 const slider = document.getElementById('slider');
 
@@ -36,12 +38,11 @@ input1.addEventListener('change', function () {
 $(document).ready(function () {
    $('.block__title').click(function(event){
       $(this).toggleClass('active').next().slideToggle(300);
-   });
+   }); 
    if ($(window).width() < 1900) {
       $('.filter__title').click(function(event){
          $(this).toggleClass('active').next().slideToggle(300);
          $('.filter').toggleClass('active');
-      });   
-   }  
+      });
+   }     
 });
-
