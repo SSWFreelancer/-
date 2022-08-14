@@ -676,7 +676,9 @@ body{
 			}
 			&.active{
 				& img{
-					display: none;
+					width: 130px;
+					height: 130px;
+					margin-top: 15px;
 				}
 				& span{
 					display: block;
@@ -849,6 +851,7 @@ body{
 }
 
 .filter {
+	min-width: 392px;
 	overflow: hidden;
 	@media(max-width: 1886px){
 		padding-bottom: 0;
@@ -912,6 +915,10 @@ body{
 		justify-content: space-between;
 		width: 100%;
 		gap:10px;
+		@media(max-width: 1886px){
+			width: auto;
+			justify-content: flex-start;
+		}
 		& input{
 			font-weight: 500;
 			font-size: 22px;
@@ -1231,7 +1238,9 @@ body{
 
 
 .plant {
-	&__container {}
+	&__container {
+		margin-bottom: 80px;
+	}
 	&__title {
 		font-weight: 700;
 		font-size: 50px;

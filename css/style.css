@@ -996,7 +996,9 @@ body {
   text-decoration: underline;
 }
 .registration__upload label.active img {
-  display: none;
+  width: 130px;
+  height: 130px;
+  margin-top: 15px;
 }
 .registration__upload label.active span {
   display: block;
@@ -1223,6 +1225,7 @@ body {
 }
 
 .filter {
+  min-width: 392px;
   overflow: hidden;
 }
 @media (max-width: 1886px) {
@@ -1306,6 +1309,14 @@ body {
           justify-content: space-between;
   width: 100%;
   gap: 10px;
+}
+@media (max-width: 1886px) {
+  .filter__inputs {
+    width: auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 .filter__inputs input {
   font-weight: 500;
@@ -1688,6 +1699,9 @@ body {
   }
 }
 
+.plant__container {
+  margin-bottom: 80px;
+}
 .plant__title {
   font-weight: 700;
   font-size: 50px;

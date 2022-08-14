@@ -53,10 +53,10 @@
                      <span>*Поля, обязательные для заполнения.</span>       
                   </div>
                   <div class="registration__upload">
-                     <input type="file" name="file" id="input__file" accept="image/*">
+                     <input onchange="readURL(this);" type="file" name="file" id="input__file" accept="image/*">
                      <label id="input__label" for="input__file">
                         <span>Файл успешно выбран</span>
-                        <img src="img/upload.png" alt="">
+                        <img id="preview" src="img/upload.png" alt="">
                         <p>Загрузить фото</p>
                      </label>
                  </div>                  
