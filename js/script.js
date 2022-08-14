@@ -1,3 +1,13 @@
+function ready(){
+   var input = document.getElementById('input__file')
+   var label = document.getElementById('input__label')
+   input.addEventListener('change', function(e){
+      label.classList.add('active');
+   });
+};
+
+document.addEventListener("DOMContentLoaded", ready);
+
 const slider = document.getElementById('slider');
 
 noUiSlider.create(slider, {
@@ -22,16 +32,6 @@ input1.addEventListener('change', function () {
    slider.noUiSlider.set([null, this.value]);
 });
 
-function ready(){
-   var input = document.getElementById('input__file')
-   var label = document.getElementById('input__label')
-   input.addEventListener('change', function(e){
-      label.classList.add('active');
-   });
-};
-
-document.addEventListener("DOMContentLoaded", ready);
-
 
 $(document).ready(function () {
    $('.block__title').click(function(event){
@@ -42,6 +42,6 @@ $(document).ready(function () {
          $(this).toggleClass('active').next().slideToggle(300);
          $('.filter').toggleClass('active');
       });   
-   }   
-
+   }  
 });
+
