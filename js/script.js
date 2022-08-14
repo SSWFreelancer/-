@@ -3,10 +3,8 @@ $(document).ready(function () {
       $('.view-product__sel span').removeClass('active');
       $(this).addClass('active');
    });     
-   var input = document.getElementById('input__file')
-   var label = document.getElementById('input__label')
-   input.addEventListener('change', function(e){
-      label.classList.add('active');
+   $('#input__file').change(function (event) {
+      $('#input__label').addClass('active');
    });
 });
 
